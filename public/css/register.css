@@ -23,20 +23,16 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-.container h2 {
+.container h1 {
   font-size: 1.5rem;
   color: #333;
   font-weight: 500;
   text-align: center;
 }
+
 .container .form {
   margin-top: 30px;
 }
-
-.container .akun{
-    text-align: center;
-  }
-  
 .form .input-box {
   width: 100%;
   margin-top: 20px;
@@ -111,7 +107,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  background: rgb(78, 137, 214);
+  background:rgb(78, 137, 214);
 }
 .form button:hover {
   background: rgb(78, 137, 214);
@@ -124,6 +120,31 @@ body {
   .form :where(.gender-option, .gender) {
     row-gap: 15px;
   }
+
+}
+
+.akun p{
+  text-align: center;
+}
+
+.input-wrapper {
+  position: relative; /* Atur posisi relatif agar ikon bisa diposisikan absolut */
+}
+
+.input-wrapper input {
+  padding-right: 40px; /* Memberikan ruang untuk ikon di sebelah kanan input */
+}
+
+.pass-icon1, .pass-icon2 {
+  position: absolute;
+  right: 15px; /* Sesuaikan jarak dari sisi kanan input */
+  top: 50%; /* Posisi vertikal di tengah */
+  transform: translateY(-50%); /* Mengangkat ikon ke tengah vertikal */
+  cursor: pointer;
+  width: 24px; /* Ukuran ikon */
+  height: 24px; /* Ukuran ikon */
+  pointer-events: all; /* Memastikan ikon dapat di-klik */
+  display: block; /* Pastikan ikon ditampilkan sebagai blok */
 }
 
 .input-box .invalid-feedback {
@@ -138,45 +159,3 @@ body {
   width: 100%; /* Lebar penuh agar sesuai dengan input */
   box-sizing: border-box; /* Memastikan padding tidak memengaruhi lebar */
 }
-.password + .invalid-feedback {
-  margin-top: 10px; /* Menambahkan jarak khusus di bawah password */
-}
-
-.error-box {
-  color: #b94a48;
-  background-color: #f2dede;
-  border: 1px solid #ebccd1;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  margin-top: 5px;
-  clear: both; 
-}
-
-/* Perbaikan untuk kotak password */
-.password {
-  position: relative;
-  width: 100%; /* Lebar penuh */
-  height: 50px; /* Sama seperti input lainnya */
-  margin-top: 8px;  
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.password input {
-  flex-grow: 1; /* Input akan mengisi lebar yang tersisa */
-  padding: 0 15px; /* Padding sama seperti input lainnya */
-  font-size: 1rem;  
-}
-
-.pass-icon {
-  position: absolute;
-  right: 15px; /* Jarak dari sisi kanan */
-  cursor: pointer;
-  width: 24px; /* Sesuaikan ukuran ikon */
-  height: 24px;
-}
-
-

@@ -11,5 +11,7 @@
 </head>
 <body>
     @yield('konten')
+
+    @yield('java')
 </body>
 </html>
