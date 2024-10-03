@@ -15,7 +15,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-Route::get('/employeeDashboard', [EmployeeDashboardController::class, 'index']);
+// Route::get('/employeeDashboard', [EmployeeDashboardController::class, 'index']);
 
 // Route::get('/sesi', [SessionController::class, 'index']);
 // Route::post('/sesi/login', [SessionController::class, 'login']);
@@ -23,6 +23,7 @@ Route::get('/sesi/logout', [LoginController::class, 'logout']);
 // Route::get('/register', [SessionController::class, 'register']);
 // Route::post('/sesi/create', [SessionController::class, 'create']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/employeeDashboard', [DashboardController::class, 'employee']);
 Route::resource('schedule', ScheduleController::class);
 
 // Route::get('/schedule', [ScheduleController::class, 'index']);

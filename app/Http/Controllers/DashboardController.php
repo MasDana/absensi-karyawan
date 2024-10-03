@@ -13,4 +13,9 @@ class DashboardController extends Controller
         return view('dashboard');
         // return view('dashboard')->with(['attendance' => Attendance::all()]);
     }
+
+    public function employee()
+    {
+        return view("sesi/employeeDashboard");
+    }
 }
