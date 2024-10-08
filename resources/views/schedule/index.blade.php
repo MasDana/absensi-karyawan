@@ -33,7 +33,14 @@
             <td>{{ $schedule->slug }}</td>
             <td>{{ $schedule->time_in }}</td>
             <td>{{ $schedule->time_out }}</td>
-            <td> <a href="/schedule/edit" class="btn btn-primary">Edit Jadwal</a> <a href="/schedule/delete" class="btn btn-primary">Hapus Jadwal</a></td>
+            <td> <a href='{{ url('/schedule/'.$schedule->id.'/edit')  }}' class="btn btn-primary">Edit Jadwal</a> 
+                <br> 
+                <form onsubmit="return confirm('Betul kh?')" action="{{ '/schedule/'.$schedule->id }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Hapus Jadwal</button>
+                </form>
+            {{-- <a href="/schedule/delete" class="btn btn-primary">Hapus Jadwal</a></td> --}}
 
         </tr>
     @endforeach
